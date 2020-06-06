@@ -42,8 +42,8 @@ app.put('/image',(req,res)=>{image.handleImage(req,res,db)})
 // bcrypt.compare("veggies", hash, function (err, res) {
 //     // res = false
 // });
-app.listen(3001,()=>{
-    console.log('app is running');
+app.listen(process.env.PORT || 3001,()=>{
+    console.log(`app is running on port ${process.env.PORT}`);
 });
 
 /*
